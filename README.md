@@ -1,2 +1,1 @@
-# leren-programmeren
-leren-programmeren
+# pasta
