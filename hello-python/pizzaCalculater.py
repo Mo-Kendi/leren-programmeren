@@ -1,10 +1,10 @@
 # Mohamad kendi pizza calculater
 print('welkom bij pizza mo kendi')
 
-small = float(6.99)
+small = 6.99
 medium = float(10.99)
 large = float(16.99)
-
+print(type(small))
 smallsize = int(input("Hoeveel kleine pizza's wilt u? "))
 mediumsize = int(input("Hoeveel medium pizza's wilt u hebben? "))
 largesize = int(input("Hoeveel large pizza's wilt u? "))
