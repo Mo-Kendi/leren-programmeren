@@ -3,8 +3,7 @@ ervaring = int(input("Hoeveel jaar heeft u evaring met dieren-dressuur?"))
 if ervaring <= 4:
     ervaring2 = int(input("Hoeveel jaar heeft u ervaring met jongeleren?"))
     if ervaring2 <= 5:
-        ervaring3 = int(
-            input("Hoeveel jaar ervaring heeft u met de acrobatiek?"))
+        ervaring3 = int(input("Hoeveel jaar ervaring heeft u met de acrobatiek?"))
         ###############################################
 
 name = input("Wat is uw naam?")
@@ -33,59 +32,59 @@ certificaat = input(
 #eigen vragen
 huisdieren = input('houdt u van huisdieren? (ja/nee)')
 zwemmen = int(input('hoe vaak zwemt u per week? '))
-fam = input('heeft u familie in het buiten land? (ja/nee)')
+stinkkaas = input('stinkt u naar kaas? (ja/nee)')
 naarHuis = input('wilt u naar huis? (ja/nee)')
 #######################
 
-i = 0
+totaleScore = 0
 if ervaring > 4:
-    i += 1
+    totaleScore += 1
 
 if ervaring <= 4:
     if ervaring2 > 5:
-        i += 1
+        totaleScore += 1
 if ervaring <= 4:
     if ervaring2 <= 5:
         if ervaring3 > 3:
-            i += 1
+            totaleScore += 1
 
 if diploma == "ja":
-    i += 1
+    totaleScore += 1
 
 if bewijs == "ja":
-    i += 1
+    totaleScore += 1
 
 if hoed == "ja":
-    i += 1
+    totaleScore += 1
 
 if man == "ja":
     if snor > 10:
-        i += 1
+        totaleScore += 1
 
 if man == "nee":
     if haar == "ja":
-        i += 1
+        totaleScore += 1
 
     if haar2 > 20:
-        i += 1
+        totaleScore += 1
 
 if lengte > 150:
-    i += 1
+    totaleScore += 1
 
 if gewicht > 90:
-    i += 1
+    totaleScore += 1
 
 if certificaat == "ja":
-    i += 1
+    totaleScore += 1
 
 if man == "ja":
-    if i >= 8:
+    if totaleScore >= 8:
         print("U mag gaan soliciteren!")
     else:
         print("U mag helaas niet gaan soliciteren!")
 
 else:
-    if i >= 9:
+    if totaleScore >= 9:
         print("U mag gaan soliciteren!")
 
     else:

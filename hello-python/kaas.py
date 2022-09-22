@@ -9,15 +9,25 @@ if geel == "nee":
         if korst == "ja":
             print("Blue de Rochbaron")
         
+
         else:
             print("Foume d'Ambert")
     
     else:
         korst1 = input("heeft de kaas een korst? (ja/nee)")
-
+       
         if korst1 == "ja":
+            kaasStink = input('Stinkt de kaas? (ja/nee)')
+            
+            if kaasStink == 'ja':
+            
+            #print('brie')
+
+        #als de kaas stinkt dan is het camembert zo niet dan is het brie
+        
             print("Camembert")
         
+
         else:
             print("Mozzarella")
 
