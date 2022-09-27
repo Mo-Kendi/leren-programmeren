@@ -1,13 +1,36 @@
 # Mohamad kendi pizza calculater
+from tkinter import E
+
+
 print('welkom bij pizza mo kendi')
 
 small = 6.99
 medium = float(10.99)
 large = float(16.99)
-print(type(small))
-smallsize = int(input("Hoeveel kleine pizza's wilt u? "))
-mediumsize = int(input("Hoeveel medium pizza's wilt u hebben? "))
-largesize = int(input("Hoeveel large pizza's wilt u? "))
+ex = 0
+
+while ex == 0:
+    try:
+        smallsize = int(input("Hoeveel kleine pizza's wilt u? "))
+        ex = +1
+    except:
+        print('onjuiste ingevoerde waarde')
+
+while ex == 1:
+    try:
+        mediumsize = int(input("Hoeveel medium pizza's wilt u hebben? "))
+        ex = +2
+    except:
+        print('onjuiste ingevoerde waarde')
+
+while ex == 2:
+    try:   
+        largesize = int(input("Hoeveel large pizza's wilt u? "))
+        ex = +3
+    except:
+        print('onjuiste ingevoerde waarde')
+
+
 
 totaal = smallsize * small + mediumsize * medium + largesize * large
 totaal_af = round(totaal,2)
