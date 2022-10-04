@@ -7,8 +7,14 @@ if ervaring <= 4:
         ###############################################
 
 name = input("Wat is uw naam?")
+if name == 'slemmer':
+    raise NameError ('slemmer u mag sws niet solliciteren helaas pinda kaas')
 diploma = input("Heeft u een MBO-4 diploma ondernemen? (ja/nee)")
+if diploma == 'nee':
+    raise NameError ('ben je zo ver nog dat je geen mbo diploma hebt????')
 bewijs = input("Heeft u een vrachtwagen rjibewijs? (ja/nee)")
+if bewijs == 'nee':
+    raise NameError ('nou nou zelfs mijn opa heeft dat')
 hoed = input("Heeft u een hoge hoed? (ja/nee)")
 man = input("Bent u een man? (ja/nee)")
 
