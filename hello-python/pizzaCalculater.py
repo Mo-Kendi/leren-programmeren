@@ -12,24 +12,25 @@ ex = 0
 while ex == 0:
     try:
         smallsize = int(input("Hoeveel kleine pizza's wilt u? "))
-        ex = +1
+        ex = 1
     except:
         print('onjuiste ingevoerde waarde')
 
-while ex == 1:
-    try:
-        mediumsize = int(input("Hoeveel medium pizza's wilt u hebben? "))
-        ex = +2
-    except:
-        print('onjuiste ingevoerde waarde')
-
-while ex == 2:
+ex = 0
+while ex == 0:
     try:   
         largesize = int(input("Hoeveel large pizza's wilt u? "))
-        ex = +3
+        ex = 1
     except:
         print('onjuiste ingevoerde waarde')
 
+ex = 0
+while ex == 0:
+    try:
+        mediumsize = int(input("Hoeveel medium pizza's wilt u hebben? "))
+        ex = 1
+    except:
+        print('onjuiste ingevoerde waarde')
 
 
 totaal = smallsize * small + mediumsize * medium + largesize * large
