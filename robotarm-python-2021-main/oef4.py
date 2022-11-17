@@ -3,19 +3,15 @@ from RobotArm import RobotArm
 robotArm = RobotArm('exercise 4')
 
 # Jouw python instructies zet je vanaf hier:
-for i in range(2):
+for i in range(5):
     robotArm.grab()
-    for count in range(0, 2):
+    for stapel in range(0, 2):
         robotArm.moveRight()
     robotArm.drop()
-    for count in range(0, 2):
+    for stapel in range(0, 2):
         robotArm.moveLeft()
-
-robotArm.grab()
 robotArm.moveRight()
-robotArm.drop()
-
-for i in range(4):
+for i in range(5):
     robotArm.moveRight()
     robotArm.grab()
     robotArm.moveLeft()

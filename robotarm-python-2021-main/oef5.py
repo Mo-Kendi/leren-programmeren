@@ -3,14 +3,15 @@ from RobotArm import RobotArm
 robotArm = RobotArm('exercise 5')
 
 # Jouw python instructies zet je vanaf hier:
-for x in range(7):
+robotArm.speed = 3
+for step in range(7):
     robotArm.moveRight()
-for i in range(8):
+for blok in range(8):
     robotArm.grab()
     robotArm.moveRight()
     robotArm.drop()
-    if i <7:
-        for y in range(2):
+    if blok <7:
+        for move in range(2):
             robotArm.moveLeft()
 
 
