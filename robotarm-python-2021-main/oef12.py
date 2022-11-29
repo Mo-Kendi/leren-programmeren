@@ -3,6 +3,7 @@ from RobotArm import RobotArm
 robotArm = RobotArm('exercise 12')
 
 # Jouw python instructies zet je vanaf hier:
+robotArm.speed = 3
 teller = 9
 for x in range(0,9):
     robotArm.grab()

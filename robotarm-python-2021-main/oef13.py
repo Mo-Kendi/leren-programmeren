@@ -4,6 +4,7 @@ robotArm = RobotArm()
 robotArm.randomLevel(1,7)
 
 # Jouw python instructies zet je vanaf hier:
+robotArm.speed = 3
 teller = 9
 bewegen = True
 while bewegen:

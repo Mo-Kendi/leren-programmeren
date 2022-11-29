@@ -11,7 +11,7 @@ aantal_kortingsbonen = int(input('hoeveel kortings bonnen heeft u?'))
 korting = int(input('hoeveel cent zijn ze waard?'))
 korting_total = aantal_kortingsbonen * korting / 100
 #########################################
-totaal= stoktotaal + crtotaal - korting_total
+totaal = stoktotaal + crtotaal - korting_total
 
 print({totaal},'euro')
 
