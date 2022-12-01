@@ -5,23 +5,21 @@ robotArm.randomLevel(1,7)
 
 # Jouw python instructies zet je vanaf hier:
 robotArm.speed = 3
-teller = 9
-bewegen = True
-while bewegen:
+place = 9
+move = True
+while move:
     robotArm.grab()
     color = robotArm.scan()
     if color == "":
-        print('geen blokje')
-        bewegen = False
-        robotArm.wait()
-        
+        print('nothing to grab')
+        move = False    
     else:
-        for x in range(0,teller):
+        for arm in range(place):
             robotArm.moveRight()
         robotArm.drop()
-        for x in range(0,teller):
+        for arm in range(place):
             robotArm.moveLeft()
-        teller -=1
+        place -=1
 
 # Na jouw code wachten tot het sluiten van de window:
 robotArm.wait()
