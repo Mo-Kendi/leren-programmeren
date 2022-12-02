@@ -1,24 +1,29 @@
 import random
 
-aantalRounds = 20
-aantalpoginen = 10
+AANTALRONDES = 20
+AANTALPOGINGEN = 10
 ronde = 0
 score = 0
 poging = 0
-while ronde < aantalRounds:
-    meeDoen = input("zou je een getal tussen 1 en 1000 willen raden? ja/nee  ")
-    raadGetal = random.randint(1, 1000) #randint staat voor een random int getal.
-    print(raadGetal)
+while ronde < AANTALRONDES:
+    ronde+=1
+    while True:
+        meeDoen = input("zou je een getal tussen 1 en 1000 willen raden? ja/nee  ").lower()
+        if meeDoen in ['ja','nee']:
+            break
+        else:
+            print('vul ja of nee in')
+
     if meeDoen == "nee":
         print("einde")
-        print(f"Jou eind score is {score} van de {aantalRounds} punten!")
-        exit()
-    elif meeDoen == "ja":
-        print('je gaat nu 10 keer raden en dan kijken wij of je goed hebt ')
-    else:
-        print('vul ja of nee in')
+        break
+    print(f'dit is ronde: {ronde}')
+    raadGetal = random.randint(1, 1000) #randint staat voor een random int getal.
+    print(raadGetal)
 
-    while poging < aantalpoginen:
+    poging=0
+
+    while poging < AANTALPOGINGEN:
         while True:
             try:
                 antwoord = int(input('raad het getal: '))
@@ -44,6 +49,5 @@ while ronde < aantalRounds:
         poging += 1
 
     print(f"jou eind score is{score} ")
-    ronde+=1
 
-print(f"Jou eind score is {score} van de {aantalRounds} punten!")
+print(f"Jou eind score is {score} van de {AANTALRONDES} punten!")
