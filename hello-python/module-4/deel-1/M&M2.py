@@ -1,17 +1,17 @@
 import random
-Kleur = ["oranje","blauw","groen","bruin"]
+kleur = ["oranje","blauw","groen","bruin"]
 hvlMM = int(input("Hoeveel M&M's er aan de zak toegevoegd moeten worden? "))
-ZakMetMM = []
+zakMM = []
 
-for x in range(hvlMM):
-    ZakMetMM.append(random.choice(Kleur))
+for y in range(hvlMM):
+    zakMM.append(random.choice(kleur))
 zak2 = {}
 
-for zak in ZakMetMM:
-    if zak in zak2:
-        zak2[zak] += 1
+for x in zakMM:
+    if x in zak2:
+        zak2[x] += 1
     else:
-        zak2[zak] = 1
+        zak2[x] = 1
 
 for key, value in zak2.items():
     if value > 0:
