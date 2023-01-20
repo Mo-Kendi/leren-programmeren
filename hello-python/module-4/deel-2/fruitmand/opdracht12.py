@@ -5,7 +5,7 @@ for index in range(0,len(fruitmand)): #index: vraagt de adres van een item in de
     lengte_naam= len(fruitmand[index]['name'])
     if lengte_naam > max_lengte:
         max_lengte = lengte_naam
-        naam = (fruitmand[index].get('name')) #bijvoorbeeld index.get name dan komt uit sinasappel
+        naam = (fruitmand[index].get('name'))
         kleur = (fruitmand[index].get('color'))
         gewicht = (fruitmand[index].get('weight'))
 
