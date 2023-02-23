@@ -1,18 +1,19 @@
-def fibonacci(minimum: int) -> str:
-    num1, num2 = 0, 1   
-    teller = 0
-    volgorde = ""
-    while teller < 100:
-        if num1 > minimum:
-            volgorde += (str(num1) if volgorde == "" else ", {}".format(num1))
-            teller += 1
-        laatste_2_nummers = num1 + num2
-        num1 = num2
-        num2 = laatste_2_nummers
-    return volgorde
+def gulden_snede(n1, n2):
+    return n2 / n1
 
+def main(num_termen):
+    eerste_term = 0
+    tweede_term = 1
 
-while not (amount := input("Vanaf welk nummer wilt u dat wij printen?")).isdigit():
-    print("Noem een NUMMER op, bedankt.")
+    for i in range(num_termen):
+        print(eerste_term)
 
-print(fibonacci(int(amount)))
+        volgende_term = eerste_term + tweede_term
+        eerste_term = tweede_term
+        tweede_term = volgende_term
+
+    de_gulde_snede = gulden_snede(eerste_term, tweede_term)
+    print("De gulden snede is:", de_gulde_snede)
+
+if __name__ == "__main__":
+    main(10) 
