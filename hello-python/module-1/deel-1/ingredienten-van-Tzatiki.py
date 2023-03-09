@@ -2,9 +2,7 @@
 
 
 print('berekenen van de ingredienten')
-aantalkomkommers = input('hoeveel komkommers')
-
-aantalkomkommers = int(aantalkomkommers)
+aantalkomkommers = int(input('hoeveel komkommers'))
 
 mespuntjesperkomkommer = 1
 zeezoutpuntjes = aantalkomkommers * mespuntjesperkomkommer
