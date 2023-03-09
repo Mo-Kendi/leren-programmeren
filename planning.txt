@@ -1,0 +1,4 @@
+plannig: van vandaag:
+laatste opdracht van module 5 deel 1 af maken: met behulp van functions mijn game maken
+instap opdrachten online maken van javascript, met behulp van codeacademy
+javascript spacegame opdrachten maken allemaal
