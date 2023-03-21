@@ -1,3 +1,3 @@
-de start opdracht afmaken van module 5 deel 2
-module 1 afmaken javaScript
-oefenen voor engels via de online methode want binnen kort examen.
+vandaag wil ik tijdens de les cjv2 html doen
+zo ver mogelijk komen html tijdens de les van vandaag
+ik kan geen opdrachten zien want die check moet ik doen

@@ -1,0 +1,14 @@
+.button{
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 3px;
+    border: 1px black solid;
+}
+
+.btn{
+    background-color: yellow;
+}
+.blue{
+    background-color: blue;
+    color: white;
+}
