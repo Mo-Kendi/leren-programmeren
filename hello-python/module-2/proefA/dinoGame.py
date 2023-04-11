@@ -4,6 +4,9 @@ from functions import *
 story = welcome()  
 weapon = choose_weapon() 
 begin = ready_to_fight()
-attack = first_fight()
+result = first_fight(weapon)
+if result == 0:
+    print(GAME_OVER)
+    exit()
 way = second_fight()
 lastFase = last_boss()

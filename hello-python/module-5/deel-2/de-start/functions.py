@@ -1,5 +1,5 @@
 import time
-from termcolor import colored
+# from termcolor import colored
 from data import JOURNEY_IN_DAYS
 
 ##################### M04.D02.O2 #####################
@@ -94,6 +94,8 @@ def getAdventurerCut(profitGold:float, investorsCuts:list, fellowship:int) -> fl
 def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:
     pass
 
+def colored(string, color='', attrs=[], vars=[]):
+    return string
 ##################### view functions #####################
 def print_colorvars(txt:str='{}', vars:list=[], color:str='yellow') -> None:
     vars = map(lambda string, color=color: colored(str(string), color, attrs=['bold']) ,vars)

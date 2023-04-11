@@ -47,18 +47,25 @@ def ready_to_fight():
         else:
             print('Please enter "yes" or "no".')
 
-def first_fight():
+def first_fight(weapon):
     print(DINO1)
     attack = True
+    result = 0
     while attack == True:
         attack = input('Press "e" to attack!')
         if attack.lower() == 'e':
-            print('What a hit! Nice job! You will proceed to the next level.')
-            print('\n')
+            if weapon != "sword":
+                print("you cant defeat him with your weapon")
+            else:
+                print('What a hit! Nice job! You will proceed to the next level.')
+                print('\n')
+        elif weapon == "sword":
+            result += 1
         else:
             attack = False
-            print(GAME_OVER)
-    return attack
+            result = 0
+    # return attack
+    return result
 
 def second_fight():
     story = 1
