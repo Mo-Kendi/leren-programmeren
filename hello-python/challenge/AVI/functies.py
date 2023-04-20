@@ -1,3 +1,4 @@
+import math
 EASY_TEXT = """Ik hou van programmeren. Programmeren is leuk. 
 Ik kan veel dingen maken met programmeren. Ik kan een website maken. 
 Ik kan een spel maken. Ik kan een chatbot maken. 
@@ -32,7 +33,11 @@ def getFileContentAsString(textFile: str) -> str:
 
 # opdracht 1
 def getNumberOfCharacters(text: str) -> int:
-    return len(text) - text.count(" ") - text.count(".") - text.count(",") - text.count("!") - text.count("?")
+    count = 0
+    for x in text:
+        if x in ALLOWED_IN_WORD:
+            count+=1
+    return count
 
 # opdracht 2
 def getNumberOfSentences(text: str) -> int:
@@ -45,3 +50,25 @@ def getNumberOfSentences(text: str) -> int:
 # opdracht 3
 def getNumberOfWords(text: str) -> int:
     return len(text.split())
+# opdracht 5
+def getAVIscore(text: str) -> int:
+    zinnen = getNumberOfSentences(text)
+    woorden = getNumberOfWords(text)
+    
+    gawpz = math.floor (zinnen/woorden) #rond alles af op een geheeld getal naar beneden!!
+    if gawpz <=7:
+        AVIscore = 5
+    elif gawpz <=8:
+        AVIscore = 6
+    elif gawpz <=9:
+        AVIscore = 7
+    elif gawpz <=10:
+        AVIscore = 8
+    elif gawpz <=11:
+        AVIscore = 11
+    elif gawpz > 11:
+        AVIscore = 12
+    else:
+        print('fout')
+    return AVIscore
+
