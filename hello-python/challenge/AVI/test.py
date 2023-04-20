@@ -1,1 +1,0 @@
-return len(text) - text.count(" ") - text.count(",") - text.count(".")
