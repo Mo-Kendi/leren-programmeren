@@ -1,4 +1,4 @@
-import math
+import math #omdat ik een berekening doe in de code
 EASY_TEXT = """Ik hou van programmeren. Programmeren is leuk. 
 Ik kan veel dingen maken met programmeren. Ik kan een website maken. 
 Ik kan een spel maken. Ik kan een chatbot maken. 
@@ -68,7 +68,5 @@ def getAVIscore(text: str) -> int:
         AVIscore = 11
     elif gawpz > 11:
         AVIscore = 12
-    else:
-        print('fout')
     return AVIscore
 

@@ -5,20 +5,24 @@ from data import JOURNEY_IN_DAYS
 ##################### M04.D02.O2 #####################
 
 def copper2silver(amount:int) -> float:
-    pass
+    return amount / 10
 
 def silver2gold(amount:int) -> float:
-    pass
+    return amount / 5
 
 def copper2gold(amount:int) -> float:
-    pass
+    return silver2gold(copper2silver(amount))
 
 def platinum2gold(amount:int) -> float:
-    pass
+    return amount * 25
 
 def getPersonCashInGold(personCash:dict) -> float:
-    pass
-
+    total_gold_value = 0
+    total_gold_value += copper2gold(personCash["copper"])
+    total_gold_value += silver2gold(personCash["silver"])
+    total_gold_value += personCash["gold"]
+    total_gold_value += platinum2gold(personCash["platinum"])
+    return total_gold_value
 ##################### M04.D02.O4 #####################
 
 def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
