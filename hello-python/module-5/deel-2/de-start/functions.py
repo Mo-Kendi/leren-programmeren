@@ -1,6 +1,7 @@
 import time
 # from termcolor import colored
 from data import *
+import math
 
 ##################### M04.D02.O2 #####################
 
@@ -32,28 +33,36 @@ def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
 ##################### M04.D02.O5 #####################
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
-    pass
+    lst = []
+    for x in range(len(list)):
+        if list[x][key] == value:
+            lst.append(list[x])
+    return lst
 
 def getAdventuringPeople(people:list) -> list:
-    pass
+    return getFromListByKeyIs(people, 'adventuring', True)
 
 def getShareWithFriends(friends:list) -> int:
-    pass
+    return getFromListByKeyIs(friends, 'shareWith', True)
 
 def getAdventuringFriends(friends:list) -> list:
-    pass
-
+    lst = []
+    for x in range(len(friends)):
+        if friends[x]['adventuring'] and friends[x]['shareWith']:
+            lst.append(friends[x])
+    return lst
 ##################### M04.D02.O6 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
-    pass
+    return math.ceil(people / 2)
 
 def getNumberOfTentsNeeded(people:int) -> int:
-    pass
+    return math.ceil(people / 3)
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
-    pass
-
+    horsesCosts = horses * COST_HORSE_SILVER_PER_DAY * JOURNEY_IN_DAYS
+    tentsCosts = tents * COST_TENT_GOLD_PER_WEEK * 2
+    return silver2gold(horsesCosts) + tentsCosts
 ##################### M04.D02.O7 #####################
 
 def getItemsAsText(items:list) -> str:
